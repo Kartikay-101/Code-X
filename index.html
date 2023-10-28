@@ -4,14 +4,15 @@
 	<meta charset="utf-8">
 	<title>
 		Personalized || Healthcare Recommendation.
-	</title>
-    
+	</title>    
     <link rel="stylesheet" type="text/css" href="style.css">
-    
-    
 </head>
 <body>
-    
+<!--Loading started-->
+<div id="preloader">
+
+</div>
+<!-- Wrap strted-->
 <span class="small-round-image">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnnRQj7ekQ49-AhgGd61_D9VqlKLWRfCVtQ&usqp=CAU" alt="Hamburger Photo">
 </span>
@@ -23,6 +24,16 @@
 	<a href="#"><div></div></a>
 
 </div>
+<!-- Wrap End-->
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        setTimeout(function(){
+            loader.style.display = "none";
+        }, 3000); // 3000 milliseconds = 3 seconds
+    });
+</script>
+
 
 
 </body>
