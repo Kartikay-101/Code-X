@@ -1,179 +1,132 @@
-body,html{
-	margin: 0;
-	padding: 0;
-	height: 100%;
+body, html {
+    background: #ffffff;
+    box-shadow: inset 0 0 20vmin 0 #92a8e3;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+	/* PRELOADER START */
 #preloader{
 	background: #ffffff url(Loder.gif) no-repeat center center;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
 	z-index: 100;
+	box-shadow: inset 0 0 10vmin 0 #6583d5;
 }
-header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-body{
-	background: #E3DFD2;
-	box-shadow: inset 0 0 20vmin 0 #5e676f;
-}
-
-.small-round-image {
-    width: 70px; 
-    height: 70px;
-    border-radius: 70%;
-    overflow: hidden;
-}
-
-.small-round-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.wrap{
-	position: relative;
-	width: 80vmin;
-	height: 80vmin;
-	background: inherit;
-	transform: scale(0.2) translateZ(0px);
-	opacity: 0;
-	transition: transform .5s, opacity .5s;
-	margin: 0 auto;
-}
-
-a{
-	position: absolute;
-	left: 0; top: 0;
-	width: 47.5%;height: 47.5%;
-	overflow: hidden;
-	transform: scale(.5) translateZ(0px);
-	background: #585247;
-}
-a div{
-	height: 100%;
-	background-size: cover;
-	opacity: .5;
-	transition: opacity .5s;
-	border-radius: inherit;
-
-}
-a:nth-child(1)
-{
-	border-radius: 40vmin 0 0 0;
-	transform-origin: 110% 110%;
-	transition: transform .4s .15s;
-}
-a:nth-child(1) div{
-	background-image:url('https://www.fdiworlddental.org/sites/default/files/2021-02/WOHD_infographic_1.png');
-}
-
-a:nth-child(2)
-{
-	border-radius: 0 40vmin 0 0;
-	left: 52.5%;
-	transform-origin: -10% 110%;
-	transition: transform .4s .2s;
-}
-a:nth-child(2) div{
-	background-image:url('https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-479v.jpg?sfvrsn=4dba955c_18%20479w');
-}
+	/* PRELOADER END */
 
 
-a:nth-child(3)
-{
-	border-radius: 0 0 0 40vmin;
-	top: 52.5%;
-	transform-origin: 110% -10%;
-	transition: transform .4s .25s;
+*{
+	margin:auto;
+	padding:auto;
 }
-a:nth-child(3) div{
-	background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiBJb-Tzrpi0UDIc6sf1Si-CiWbWY2vgCGKg&usqp=CAU');
+.logo{
+	width:100%;
+	background-color:;
+	border-bottom:2px solid #0f0f0f;
 }
-a:nth-child(4)
-{
-	border-radius: 0 0 40vmin 0;
-	top: 52.5%; left: 52.5%;
-	transform-origin: -10% -10%;
-	transition: transform .4s .3s;
+.logo div{
+	width:1200px;
+	background-color:;
+	font-family:calibri;
+	padding:10px;
+	text-align:left;
 }
-a:nth-child(4) div{
-	background-image: url('https://assets.telegraphindia.com/telegraph/5e5b81e5-e60f-42d9-8f3f-d2e5f1a691e1.jpg');
+.logo div table a{
+	padding:10px;
+	text-decoration:none;
+	color:rgb(179, 40, 40);
 }
-
-
-a:nth-child(5)
-{
-	border-radius: 50vmin;
-	width: 55%; height: 55%;
-	top: 22.5%; left: 22.5%;
-	transform-origin: -10% -10%;
-	transform: scale(1);
-	box-shadow: 0 0 0 5vmin #E3DfD2;
-
-}
-a:nth-child(5) div{
-	background-image: url('https://www.lifelinescreening.com/wp-content/uploads/2021/10/Diabetes-complications-653478024-768x768.jpg');
-
+.logo div table a:hover{
+	color:#428bca;
+	border-bottom:2px solid rgb(189, 26, 26);
 }
 
-span{
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	top: 45vmin;
-	width: 10vmin;
-	height: 10vmin;
-	border-radius: 100%;
-	background: #585247;
-	transform: translateZ(0px);
+.bottom{
+	width:100%;
+	background-color:#b6c6d0;
+	border-bottom:2px solid #f0f0f0;
 }
-span span{
-	position: absolute;
-	width: 60%;
-	height: 3px;
-	background: #ACA696;
-	left: 20%;
-	top: 50%;
-	border-radius: 0;
+.bottom div{
+	width:1200px;
+	color:#fff;
+	background-color:;
+	font-family:calibri;
+	text-align:right;
 }
-span span:after, span span:before{
-	content: "";
-	position: absolute;
-	left: 0;
-	top: -1.5vmin;
-	width: 100%;
-	height: 100%;
-	background: inherit;
-}
-span span:after{
-	top: 1.5vmin;
-}
-span:hover + .wrap, .wrap:hover{
-	transform: scale(0.8) translateZ(0px);
-	opacity: 1;
-}
-span:hover + .wrap a, .wrap:hover a{
-transform: scale(1) translateZ(0px);
+.bottom div table{
+	padding-top:30px;
+	width:1100px;
+	text-align:justify;
+	color:gray;
+	font-size:20px;
 }
 
+.bottom_up{
+	width:100%;
+	background-color:#ffffff;
+	border-bottom:2px solid #f0f0f0;
+}
+.bottom_up div{
+	padding-top:20px;
+	width:1200px;
+	text-align:center;
+	background-color:#ffffff;
+	font-family:forte;
+	font-size:30px;
+	padding-bottom:20px;
+}
+.bottom_up div table{
+	padding-top:30px;
+	font-size:30px;
+	width:1100px;
+	text-align:center;
+	background-color:;
+	font-family:calibri;
+	
+}
 
+input[type="text"]{
+	padding:12px;
+	width:250px;
+}
+select{
+	padding:12px;
+	width:250px;
+}
+textarea{
+	padding:50px;
+	width:550px;
+}
+button{
+	width:550px;
+	padding:10px;
+	color:#fff;
+	font-size:20px;
+	background-color:#2FA5EB !important;
+}
 
-a:hover div{
-	opacity: 1;
-	transform: translateZ(0px);
+.nav_down{
+	width:100%;
+	background-color:#2FA5EB !important;
+	border-bottom:2px solid #f0f0f0;
+}
+.nav_down div{
+	width:1200px;
+	color:#fff;
+	background-color:#000;
+	font-family:calibri;
+	padding:10px;
+	text-align:left;
 }
 
 footer {
-    bottom: auto;
+    background-color: #428bca;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #e08713;
+    padding: 10px ;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
