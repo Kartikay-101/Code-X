@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -27,6 +28,7 @@ nav{
 nav .logo{
   width: 80px;
 }
+
 nav ul li{
   list-style: none;
   display: inline-block;
@@ -34,9 +36,15 @@ nav ul li{
 }
 
 nav ul li a{
-  text-decoration: none;
+  text-decoration:dashed;
   color: #fff;
   font-size: 17px;
+}
+nav ul li a:hover{
+  color: #f0911de2;
+  text-decoration :  underline ;
+  font-size: 22px;
+  
 }
 .content{
   color: rgb(117, 195, 195);
@@ -53,17 +61,22 @@ nav ul li a{
   color: transparent;
 }
 .content a{
+  font-style:initial;
   text-decoration: none;
   display: inline-block; 
   color: #fff;
   font-size: 24px;
-  border: 2px solid #fff;
   padding: 14px 70px;
+  border: 2px solid #ffffff;
   border-radius: 50px;
   margin-top: 20px;
 }
 .content a:hover{
-  -webkit-text-stroke: 2px rgb(121, 166, 211);
+  font-size: 30px;
+  text-transform:uppercase;
+  -webkit-text-stroke: 1px rgb(149, 191, 229);
+  border: 2px solid #8e2929a8;
+  padding: 20px 80px;
   color: transparent;
 }
 .back{
@@ -87,9 +100,9 @@ nav ul li a{
 
 svg {
     display: block;
-    font: 18em 'Montserrat';
-    width: 110%;
-    height: 250px;
+    font: 17em 'Montserrat';
+    width: 100%;
+    height: 280px;
     margin: 0 auto;
 }
 
