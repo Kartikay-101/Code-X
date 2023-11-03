@@ -37,14 +37,31 @@ nav ul li{
 }
 
 nav ul li a{
+  width: max-content;
   text-decoration:dashed;
-  color: #fff;
-  font-size: 17px;
+  color:rgb(206, 206, 239);
+  font-size: 19px;
+  cursor: pointer;
+  margin: 100px auto;
+  position: relative;
 }
-nav ul li a:hover{
-  color: #f0911de2;
-  text-decoration :  underline ;
+nav ul li a::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background: rgb(206, 206, 239);
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+  font-size: 19px;
+}
+nav ul li a:hover::after{
   font-size: 22px;
+  transform: scaleX(1);
+  background: #f0911de2;
   
 }
 .content{
@@ -70,7 +87,7 @@ nav ul li a:hover{
   border: 0.25em solid var(--glow-color);
   padding: 1em 3em;
   color: var(--glow-color);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   background-color: var(--btn-color);
   border-radius: 1em;
@@ -200,6 +217,7 @@ footer{
   line-height: 20px;
 }
 .row{
+  max-height:em;
   width: 85%;
   margin: auto;
   display: flex;
@@ -208,7 +226,7 @@ footer{
 }
 .col{
   flex-basis: 25%;
-  padding: 10px;
+  padding: px;
 }
 .col:nth-child(2), .col:nth-child(3){
  flex-basis: 15%; 
@@ -227,9 +245,21 @@ footer{
   border-bottom: 1px solid #ccc;
   margin: 20px 0;
 }
+.email-id a{
+  color: #e2e1e1;
+}
+.email-id a:hover{
+  font-size: 18px;
+  color: rgb(148, 118, 199);
+}
 ul li{
   list-style: none;
   margin-bottom: 12px;
+}
+ul li:hover{
+  font-size: 2em;
+  font-style: oblique;
+  text-decoration: underline;
 }
 ul li a{
   text-decoration: none;
@@ -326,3 +356,40 @@ hr{
   }
 }
     /* FOOTER END*/
+    
+.line{
+  position: relative;
+  top: 25%;
+  width: 50em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 8s steps(75) 1s 10 normal both,
+  blinkTextCursor 500ms steps(75) infinite normal;
+}
+
+@keyframes typewriter {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from{
+    border-right-color: rgba(255,255,255,0.75);
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
