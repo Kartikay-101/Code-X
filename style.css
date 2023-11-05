@@ -64,35 +64,77 @@ nav ul li a:hover::after{
   background: #f0911de2;
   
 }
+
 .content{
   color: rgb(117, 195, 195);
   text-align: center;
 }
 .content h1{
-  font-size: 160px;
+  font-size: 200px;
   columns: #ffffff;
   font-weight: 600;
   transition: 0.s;
+  margin-bottom: 20px;
 }
 .content h1:hover{
   -webkit-text-stroke: 2px #ffffff;
   color: transparent;
 }
+
+    /*TYPEWRITER*/
+.line{
+  position: relative;
+  top: 25%;
+  width: 50em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 10s steps(75) 1s 100 normal both,
+  blinkTextCursor 500ms steps(75) infinite normal;
+}
+
+@keyframes typewriter {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from{
+    border-right-color: rgba(255,255,255,0.75);
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+    /*TYPEWRITER END*/
+
     /* BUTTON START */
 .content a{
-  --glow-color: rgb(217,176,255);
+  --glow-color: rgba(217, 176, 255, 0.524);
   --glow-spread-color: rgba(191,123,255,0.781);
   --enhanced-glow-color: rgb(206, 164, 246);
   --btn-color: rgb(72, 42, 100);
-  border: 0.25em solid var(--glow-color);
+  border: 0.2em solid var(--glow-color);
   padding: 1em 3em;
-  color: var(--glow-color);
+  color: rgb(207, 203, 203);
   font-size: 22px;
   font-weight: bold;
   background-color: var(--btn-color);
   border-radius: 1em;
   outline: none;
-  box-shadow: 0 0 1em 0.15em var(--glow-color),
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
               0 0 4em 1em var(--glow-color),
               inset 0 0 0.75em 0.25em var(--glow-color);
   text-shadow: 0 0 0.5em var(--glow-color);
@@ -110,15 +152,15 @@ position: absolute;
   width: 100%;
   background-color: var(--glow-spread-color);
   filter: blur(1em);
-  opacity: 0.7;
+  opacity: 0.3;
   transform: perspective(1.5em) rotateX(35deg) scale(1,0.6);
 }
 .content a:hover{
   color: var(--btn-color);
   background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
+  box-shadow: 0 0 0.8em 0.1em var(--glow-color),
               0 0 4em 2em var(--glow-spread-color),
-              inset 0 0 0.75em 0.25em var(--glow-color);
+              inset 0 0 0.4em 0.1em var(--glow-color);
   text-shadow: 0 0 0.5em var(--glow-color);
   font-size: 21px;
   text-transform:uppercase;
@@ -147,47 +189,6 @@ position: absolute;
     width: auto;
     height: 100%;
   }
-}
-
-svg {
-    display: block;
-    font: 17em 'Montserrat';
-    width: 100%;
-    height: 280px;
-    margin: 0 auto;
-}
-
-.text-copy {
-    fill: none;
-    stroke: rgba(219, 141, 45, 0.825);
-    stroke-dasharray: 6% 29%;
-    stroke-width: 9px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 2.5s infinite linear;
-}
-
-.text-copy:nth-child(1){
-	stroke: #fdfdfd;
-	animation-delay: -1;
-}
-
-.text-copy:nth-child(2){
-	stroke: #22b3b3aa;
-	animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-	stroke: #790e62e2;
-	animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-	stroke: #e2e1e1;
-	animation-delay: -4s;
-}
-
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
 }
     /* HERO END*/
 
@@ -229,7 +230,7 @@ footer{
   padding: px;
 }
 .col:nth-child(2), .col:nth-child(3){
- flex-basis: 15%; 
+  flex-basis: 15%; 
 }
 .F_logo{
   width: 150px;
@@ -357,39 +358,3 @@ hr{
 }
     /* FOOTER END*/
     
-.line{
-  position: relative;
-  top: 25%;
-  width: 50em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,0.75);
-  font-size: 20px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
-}
-
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 8s steps(75) 1s 10 normal both,
-  blinkTextCursor 500ms steps(75) infinite normal;
-}
-
-@keyframes typewriter {
-  from{
-    width: 0;
-  }
-  to{
-    width: 50em;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from{
-    border-right-color: rgba(255,255,255,0.75);
-  }
-  to{
-    border-right-color: transparent;
-  }
-}
