@@ -61,7 +61,7 @@ nav ul li a::after{
 nav ul li a:hover::after{
   font-size: 22px;
   transform: scaleX(1);
-  background: #f0911de2;
+  background: #9f9589e2;
   
 }
 
